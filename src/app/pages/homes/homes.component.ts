@@ -8,7 +8,7 @@ import { GithubService } from 'src/app/services/github.service';
 })
 export class HomesComponent implements OnInit {
 
-  my_profile: any = null
+  my_profile: any = []
 
   constructor(
     private githubService: GithubService
