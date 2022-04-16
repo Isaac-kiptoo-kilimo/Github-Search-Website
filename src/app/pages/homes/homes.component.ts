@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GithubService } from 'src/app/services/github.service';
 
 @Component({
   selector: 'app-homes',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomesComponent implements OnInit {
 
-  constructor() { }
+  my_profile: any = null
+
+  constructor(
+    private githubService: GithubService
+  ) { }
 
   ngOnInit(): void {
+  console.log(this.githubService.getUser('isaac-kiptoo-kilimo'))
   }
 
 }
