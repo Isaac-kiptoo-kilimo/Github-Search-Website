@@ -1,1 +1,38 @@
-<p>user works!</p>
+<ng-container>
+    <div class="container">
+        <section class="section hero-section d-flex justify-content-center flex-column align-items-center">
+          <div class="row w-100">
+            <div class=" col-md-8">
+              <h1 class="my-name my-5">
+                {{my_profile?.name}}
+              </h1>
+              <div class="hero-description">
+                <p>
+                  My GitHub Clone is a simple project to let you
+                  search through <br /> github API for users and repos.
+    
+                </p>
+                <p>
+                  In this app, we let you view your repos
+                  <br />
+                  OR
+                  <br />
+                  repos of other github users.
+                </p>
+                <!-- Token -->
+                <!-- <p>
+                  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
+                </p> -->
+              </div>
+            </div>
+            <div class=" col-md-4">
+              <div class="">
+                <div class="avatar w-100">
+                  <img src="{{my_profile?.avatar_url}}" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+</ng-container>
