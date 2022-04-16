@@ -1,8 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+:root{
+    --color: white;
+    --select-bg: #04042c9a;
+}
+*::selection{
+    background-color: var(--select-bg);
+    color: var(--color)
+}
 body{
     background: linear-gradient(to right, #120b248f, #04042c9a), url(assets/bg2.webp);
     background-repeat: no-repeat;
     background-size: cover;
     // background-position: center;
     background-attachment: fixed;
+    color: var(--color);
+}
+
+.section{
+    min-height: 100vh;
 }
