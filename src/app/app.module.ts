@@ -8,6 +8,7 @@ import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 import { HomesComponent } from './pages/homes/homes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UsersComponent } from './github/users/users.component';
+import { UserComponent } from './components/user/user.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { UsersComponent } from './github/users/users.component';
     HomesComponent,
     NavbarComponent,
     UsersComponent,
+    UserComponent,
   ],
   schemas: [
     // CUSTOM_ELEMENTS_SCHEMA
