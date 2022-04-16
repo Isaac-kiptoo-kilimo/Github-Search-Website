@@ -1,3 +1,4 @@
+import { Stat } from "../interfaces/stat";
 export class User {
      //  Make a constructor of a github user
   constructor(
@@ -33,4 +34,25 @@ export class User {
     public created_at: Date,
     public updated_at: Date
   ) { }
+// Make a method to get the user's stats
+  getStats(): Stat[] {
+    return [
+      {
+        title: 'Followers',
+        value: this.followers,
+      },
+      {
+        title: 'Following',
+        value: this.following,
+      },
+      {
+        title: 'Gists',
+        value: this.public_gists,
+      },
+      {
+        title: 'Repositories',
+        value: this.public_repos,
+      },
+    ];
+  }
 }
