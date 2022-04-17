@@ -13,6 +13,7 @@ import { ReposComponent } from './pages/github/repos/repos.component';
 import { RepoviewComponent } from './pages/github/repos/repoview/repoview.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { UserviewComponent } from './pages/github/users/userview/userview.component';
+import { GithubComponent } from './pages/github/github/github.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UserviewComponent } from './pages/github/users/userview/userview.compon
     RepoviewComponent,
     LoaderComponent,
     UserviewComponent,
+    GithubComponent,
   ],
   schemas: [
     // CUSTOM_ELEMENTS_SCHEMA
