@@ -9,6 +9,7 @@ import { HomesComponent } from './pages/homes/homes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { UsersComponent } from './github/users/users.component';
 import { UserComponent } from './components/user/user.component';
+import { ReposComponent } from './pages/github/repos/repos.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { UserComponent } from './components/user/user.component';
     NavbarComponent,
     UsersComponent,
     UserComponent,
+    ReposComponent,
   ],
   schemas: [
     // CUSTOM_ELEMENTS_SCHEMA
