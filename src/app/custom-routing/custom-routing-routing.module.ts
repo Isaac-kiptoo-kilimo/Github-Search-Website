@@ -28,6 +28,7 @@ const routes: Routes = [
         path: 'repositories/:username/:reponame',
         component: RepoviewComponent
       }
+    ]
   },
 ];
 
