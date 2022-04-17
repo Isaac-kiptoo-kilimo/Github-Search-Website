@@ -10,18 +10,22 @@
             <a class="nav-link text-white" aria-current="page" routerLink="/">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white" routerLink="/github/users">Search Users</a>
+            <a class="nav-link text-white" routerLink="/github/users">
+              <i class="fas fa-search text-white"></i>
+              Users
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" routerLink="/github/repositories">
+              <i class="fas fa-search text-white"></i>
+              Repos
+            </a>
           </li>
           <li class="nav-item">
             <a class="nav-link text-white" routerLink="/about">About</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <input class="form-control me-2 shadow-none bg-transparent text-white border border-white" type="search" placeholder="Search repos" aria-label="Search">
-          <button class="btn btn-outline-white border border-white shadow-none" type="submit">
-            <i class="fas fa-search text-white"></i>
-          </button>
-        </form>
+        
       </div>
     </div>
   </nav>

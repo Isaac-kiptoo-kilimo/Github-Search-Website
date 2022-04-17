@@ -13,18 +13,17 @@ const routes: Routes = [
     data: {
       username: 'isaac-kiptoo-kilimo'
     },
-    pathMatch: 'full',
+    // pathMatch: 'full',
   },
   {
     path: 'about',
     component: AboutComponent
   },
-  {
-    path: 'github',
-    component: GithubComponent,
-    // loadChildren: () => import('./custom-routing/custom-routing.module').then(m => m.CustomRoutingModul.e),
-    loadChildren: () => import('./custom-routing/custom-routing.module').then(m => m.CustomRoutingModule),
-  },
+  // {
+  //   path: 'github',
+  //   component: GithubComponent,
+  //   loadChildren: () => import('./custom-routing/custom-routing.module').then(m => m.CustomRoutingModule),
+  // },
   {
     path: '**',
     component: NotfoundComponent

@@ -4,7 +4,6 @@ import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { environment } from 'src/environments/environment';
 // import { catchError, retry } from 'rxjs/operators';
-// import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -41,11 +40,6 @@ export class GithubService {
   }
 
   getUserRepos(username: string): Observable<any> {
-
-    // Call git api with api_key 'dafdafdfsaf'
-    // const endpoint = `https://api.github.com/users/${username}/repos?access_token=dafdafdfsaf`;
-
-
     const endpoint = `https://api.github.com/users/${username}/repos`;
     return this.http.get(endpoint, { headers: this.headers }).pipe(response => {
       return response
@@ -54,6 +48,13 @@ export class GithubService {
 
   searchUsers(search_term: string): Observable<any> {
     const endpoint = `https://api.github.com/search/users?q=${search_term}`;
+    return this.http.get(endpoint).pipe(response => {
+      return response
+    });
+  }
+
+  searchRepos(search_term: string): Observable<any> {
+    const endpoint = `https://api.github.com/search/repositories?q=${search_term}`;
     return this.http.get(endpoint).pipe(response => {
       return response
     });
