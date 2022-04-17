@@ -17,7 +17,6 @@ import { GithubComponent } from './pages/github/github.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
-import { AboutComponent } from './pages/about/about.component';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 
 @NgModule({
@@ -33,7 +32,7 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     UserviewComponent,
     GithubComponent,
     NotfoundComponent,
-    AboutComponent,
+    
   ],
  
   imports: [
