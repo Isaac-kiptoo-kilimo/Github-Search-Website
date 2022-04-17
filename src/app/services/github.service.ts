@@ -9,7 +9,7 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class GithubService {
-  ACCESS_TOKEN= environment
+  ACCESS_TOKEN: string = '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'
 
   headers: HttpHeaders = new HttpHeaders()
 

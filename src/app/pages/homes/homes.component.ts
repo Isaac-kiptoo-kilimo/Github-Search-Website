@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GithubService } from 'src/app/services/github.service';
+// import { GithubService } from 'src/app/services/github.service';
 
 @Component({
   selector: 'app-homes',
@@ -8,14 +8,14 @@ import { GithubService } from 'src/app/services/github.service';
 })
 export class HomesComponent implements OnInit {
 
-  my_profile: any = []
+  // my_profile: any = []
 
   constructor(
-    private githubService: GithubService
+  
   ) { }
 
   ngOnInit(): void {
-  console.log(this.githubService.getUser('isaac-kiptoo-kilimo'))
+  // console.log(this.githubService.getUser('isaac-kiptoo-kilimo'))
   }
 
 }
