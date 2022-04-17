@@ -12,6 +12,7 @@ import { UserComponent } from './components/user/user.component';
 import { ReposComponent } from './pages/github/repos/repos.component';
 import { RepoviewComponent } from './pages/github/repos/repoview/repoview.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { UserviewComponent } from './pages/github/users/userview/userview.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     ReposComponent,
     RepoviewComponent,
     LoaderComponent,
+    UserviewComponent,
   ],
   schemas: [
     // CUSTOM_ELEMENTS_SCHEMA
