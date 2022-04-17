@@ -9,7 +9,7 @@ import { UserviewComponent } from '../pages/github/users/userview/userview.compo
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: GithubComponent,
     children: [
       {

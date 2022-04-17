@@ -1,4 +1,8 @@
-<ng-container>
+<ng-container *ngIf="loading">
+  <app-loader></app-loader>
+</ng-container>
+
+<ng-container *ngIf="!loading">
     <div class="container">
         <section class="section hero-section d-flex justify-content-center flex-column align-items-center">
           <div class="row w-100">
@@ -20,9 +24,9 @@
                   repos of other github users.
                 </p>
                 <!-- Token -->
-                <p>
+                <!-- <p>
                   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
-                </p>
+                </p> -->
               </div>
             </div>
             <div class=" col-md-4">

@@ -17,7 +17,7 @@ export class UsersComponent implements OnInit {
   ngOnInit(): void {
   }
   search() {
-    // this.loading = true;
+    this.loading = true;
     this.showResults = false;
     this.users = [];
 

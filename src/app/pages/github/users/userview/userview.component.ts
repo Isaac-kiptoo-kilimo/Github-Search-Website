@@ -9,6 +9,7 @@ import { ActivatedRoute } from '@angular/router';
 export class UserviewComponent implements OnInit {
 
   username: string = 'isaac-kiptoo-kilimo';
+  
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {

@@ -2,14 +2,15 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators';
 import { environment } from 'src/environments/environment';
+// import { catchError, retry } from 'rxjs/operators';
+// import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
-  ACCESS_TOKEN: string = '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'
+  // ACCESS_TOKEN: string =  API_KEY,
 
   headers: HttpHeaders = new HttpHeaders()
 
@@ -19,7 +20,7 @@ export class GithubService {
   ) { }
 
   ngOnInit(): void {
-    this.headers.set('Authorization', `token ${this.ACCESS_TOKEN}`);
+    this.headers.set('Authorization', `token ${environment.API_KEY}`);
   }
 
 
