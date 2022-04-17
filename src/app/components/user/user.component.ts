@@ -1,4 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Repository } from 'src/app/classes/repository';
+import { User } from 'src/app/classes/user';
+import { Stat } from 'src/app/interfaces/stat';
+import { GithubService } from 'src/app/services/github.service';
+
 
 @Component({
   selector: 'app-user',
@@ -7,9 +12,38 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  my_profile: any = null
+  loading: boolean = false
+  @Input() username: string = ''
+
+  stats: Stat[] = []
+  repos: Repository[] = []
+
+  constructor( private githubService: GithubService ) { }
+
 
   ngOnInit(): void {
+    if (this.username !== '') {
+      this.getUser(this.username)
+      this.getUserRepos(this.username)
+    }
+  }
+
+  getUser(username: string): void {
+    this.githubService.getUser(username).subscribe(result => {
+      this.my_profile = this.githubService.makeUserObject(User, result)
+      this.stats = this.my_profile.getStats()
+      this.loading = false
+    })
+  }
+
+  getUserRepos(username: string): void {
+    this.githubService.getUserRepos(username).subscribe(result => {
+      result.map((repo: any) => {
+        const prof = this.githubService.makeUserObject(User, repo.owner)
+        this.repos.push(new Repository(repo.id, repo.name, repo.full_name, repo.forks, repo.language, repo.html_url, prof, repo.created_at))
+      })
+    })
   }
 
 }
