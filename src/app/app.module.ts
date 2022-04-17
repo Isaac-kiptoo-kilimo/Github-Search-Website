@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { UsersComponent } from './github/users/users.component';
 import { UserComponent } from './components/user/user.component';
 import { ReposComponent } from './pages/github/repos/repos.component';
+import { RepoviewComponent } from './pages/github/repos/repoview/repoview.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { ReposComponent } from './pages/github/repos/repos.component';
     UsersComponent,
     UserComponent,
     ReposComponent,
+    RepoviewComponent,
   ],
   schemas: [
     // CUSTOM_ELEMENTS_SCHEMA
