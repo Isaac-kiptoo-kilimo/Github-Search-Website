@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { CustomRoutingModule } from './custom-routing/custom-routing.module';
 import { HomesComponent } from './pages/homes/homes.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { UsersComponent } from './github/users/users.component';
+import { UsersComponent } from './pages/github/users/users.component';
 import { UserComponent } from './components/user/user.component';
 import { ReposComponent } from './pages/github/repos/repos.component';
 import { RepoviewComponent } from './pages/github/repos/repoview/repoview.component';
 import { LoaderComponent } from './components/loader/loader.component';
 import { UserviewComponent } from './pages/github/users/userview/userview.component';
-import { GithubComponent } from './pages/github/github/github.component';
+import { GithubComponent } from './pages/github/github.component';
+import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -28,14 +30,14 @@ import { GithubComponent } from './pages/github/github/github.component';
     UserviewComponent,
     GithubComponent,
   ],
-  schemas: [
-    // CUSTOM_ELEMENTS_SCHEMA
-  ],
+ 
   imports: [
     BrowserModule, 
     HttpClientModule,
+    RouterModule,
     CustomRoutingModule,
     AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
