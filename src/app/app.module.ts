@@ -18,6 +18,8 @@ import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 import { NotfoundComponent } from './pages/notfound/notfound.component';
+import { GithubDirective } from './directives/github.directive';
+import { GithubPipe } from './pipes/github.pipe';
 
 @NgModule({
   declarations: [
@@ -32,6 +34,8 @@ import { NotfoundComponent } from './pages/notfound/notfound.component';
     UserviewComponent,
     GithubComponent,
     NotfoundComponent,
+    GithubDirective,
+    GithubPipe,
     
   ],
  
