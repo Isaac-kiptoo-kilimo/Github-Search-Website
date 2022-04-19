@@ -20,6 +20,7 @@ import { RouterModule } from '@angular/router';
 import { NotfoundComponent } from './pages/notfound/notfound.component';
 import { GithubDirective } from './directives/github.directive';
 import { GithubPipe } from './pipes/github.pipe';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { GithubPipe } from './pipes/github.pipe';
     NotfoundComponent,
     GithubDirective,
     GithubPipe,
+    FooterComponent,
     
   ],
  
